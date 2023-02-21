@@ -12,7 +12,7 @@ class DomainDetails extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(124), // here the desired height
+          preferredSize: Size.fromHeight(124),
           child: AppBar(
             toolbarHeight: 124.0,
             automaticallyImplyLeading: false,
