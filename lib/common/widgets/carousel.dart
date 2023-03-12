@@ -1,12 +1,15 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:zairza_app/constants/global_variables.dart';
+import 'home_card.dart';
 
 class CarouselImage extends StatelessWidget {
   const CarouselImage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
@@ -15,8 +18,8 @@ class CarouselImage extends StatelessWidget {
         items: GlobalVariables.carouselImages.map((i) {
           return Builder(
               builder: (BuildContext context) => Container(
-                    width: 300,
-                    height: 144,
+                    width: width * 0.99479166667,
+                    height: height * 0.2385496183206107,
                     decoration: BoxDecoration(
                       border: Border.all(width: 3),
                       borderRadius: BorderRadius.circular(8),
@@ -33,16 +36,16 @@ class CarouselImage extends StatelessWidget {
                         child: Image.asset(
                           i,
                           fit: BoxFit.cover,
-                          height: 144,
-                          width: 356,
+                          height: height * 0.3053435114503817,
+                          width: width * 0.9270833333333333,
                         ),
                       ),
                     ),
                   ));
         }).toList(),
         options: CarouselOptions(
-          viewportFraction: 0.75,
-          height: 200,
+          viewportFraction: 1,
+          height: height * 0.2385496183206107,
           autoPlay: true,
           enlargeCenterPage: true,
         ),
