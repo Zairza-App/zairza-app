@@ -15,8 +15,8 @@ class CarouselImage extends StatelessWidget {
         items: GlobalVariables.carouselImages.map((i) {
           return Builder(
               builder: (BuildContext context) => Container(
-                    width: 382,
-                    height: 200,
+                    width: 300,
+                    height: 144,
                     decoration: BoxDecoration(
                       border: Border.all(width: 3),
                       borderRadius: BorderRadius.circular(8),
@@ -33,7 +33,7 @@ class CarouselImage extends StatelessWidget {
                         child: Image.asset(
                           i,
                           fit: BoxFit.cover,
-                          height: 256,
+                          height: 144,
                           width: 356,
                         ),
                       ),
@@ -41,7 +41,7 @@ class CarouselImage extends StatelessWidget {
                   ));
         }).toList(),
         options: CarouselOptions(
-          viewportFraction: 1,
+          viewportFraction: 0.75,
           height: 200,
           autoPlay: true,
           enlargeCenterPage: true,

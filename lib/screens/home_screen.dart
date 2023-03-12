@@ -13,38 +13,39 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          toolbarHeight: 96,
-          flexibleSpace: Container(),
-          backgroundColor: Colors.white,
-          elevation: 0,
-          title: Row(
-            children: [
-              Image.asset('assets/Logo.png', height: 44, width: 44),
-              SizedBox(width: 12),
-              RichText(
-                text: TextSpan(
-                  text: 'Hello Buddy!!',
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                      fontFamily:
-                          GoogleFonts.spaceGrotesk().fontFamily.toString()),
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: '\nWelcome to Zairza',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: GoogleFonts.spaceGrotesk()
-                                .fontFamily
-                                .toString())),
-                  ],
-                ),
+        toolbarHeight: 96,
+        flexibleSpace: Container(),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Row(
+          children: [
+            Image.asset('assets/Logo.png', height: 44, width: 44),
+            SizedBox(width: 12),
+            RichText(
+              text: TextSpan(
+                text: 'Hello Buddy!!',
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontFamily:
+                        GoogleFonts.spaceGrotesk().fontFamily.toString()),
+                children: <TextSpan>[
+                  TextSpan(
+                      text: '\nWelcome to Zairza',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          fontFamily: GoogleFonts.spaceGrotesk()
+                              .fontFamily
+                              .toString())),
+                ],
               ),
-              SizedBox(width: 64),
-              CustomIconButton(),
-            ],
-          )),
+            ),
+            SizedBox(width: 64),
+            CustomIconButton(),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: Stack(
           children: <Widget>[
@@ -56,16 +57,16 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 24.0),
-                    child: CarouselImage(),
-                  ),
-                  SizedBox(height: 24),
-                  Container(
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 24.0),
+                  child: CarouselImage(),
+                ),
+                SizedBox(height: 24),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -115,23 +116,23 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 8,
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Expanded(
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 4,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(left: 24),
+                        child: HomeCard(),
+                      );
+                    },
                   ),
-                  Expanded(
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 4,
-                      itemBuilder: (BuildContext context, int index) {
-                        return Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: HomeCard(),
-                        );
-                      },
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
