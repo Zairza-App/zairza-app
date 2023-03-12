@@ -1,6 +1,6 @@
 # zairza_app
 
-A new Flutter project for zairza.
+A new Flutter project.
 
 ## Getting Started
 
