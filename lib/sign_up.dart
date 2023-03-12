@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import './common/widgets/custom_textfield.dart';
 import './common/widgets/custom_button.dart';
+import 'package:flutter/gestures.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -269,7 +270,7 @@ class _SignUpState extends State<SignUp> {
 
                   //phone number
                   SizedBox(
-                    height: _mediaQuery.size.height*0.017,
+                    height: _mediaQuery.size.height * 0.017,
                   ),
                   CustomTextfield(
                     hinttext: 'Phone number',
@@ -277,13 +278,42 @@ class _SignUpState extends State<SignUp> {
                     height: _mediaQuery.size.height * 0.069,
                   ),
                   SizedBox(
-                    height: _mediaQuery.size.height*0.034,
+                    height: _mediaQuery.size.height * 0.034,
                   ),
-                  CustomButton(
-                    text: 'Sign up',
-                    onTap: () {},
-                    width: _mediaQuery.size.width - 52,
-                    icon: Image.asset('assets/icons/tick.png'),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      CustomButton(
+                        text: 'Sign up',
+                        onTap: () {},
+                        width: _mediaQuery.size.width - 52,
+                        icon: Image.asset('assets/icons/tick.png'),
+                      ),
+                      SizedBox(
+                        height: _mediaQuery.size.height * 0.017,
+                      ),
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            const TextSpan(
+                              text: 'Have an account ? ',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            TextSpan(
+                              text: 'Sign in',
+                              style: const TextStyle(
+                                  color: Color(0xffFF8B2C),
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold),
+                              recognizer: TapGestureRecognizer()..onTap = () {},
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
