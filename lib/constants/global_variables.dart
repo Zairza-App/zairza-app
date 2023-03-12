@@ -10,11 +10,18 @@ class Keys {
 class GlobalVariables {
   // COLORS
 
-  static const primaryColor = Color(0xffEF7A6B);
-  static const secondaryColor = Color(0xffFFE151);
+  static const primaryColor = Color(0xffFFC700);
+  static const secondaryColor = Color(0xff23A094);
   static const backgroundColor = Color(0xffE8F1D7);
   static const appbarColor = Color(0xffFEF9ED);
 
-  static var selectedNavBarColor = Colors.cyan[800]!;
+  static var selectedNavBarColor = Colors.cyan[800];
   static const unselectedNavBarColor = Colors.black87;
+
+  //Images
+  static const List<String> carouselImages = [
+    'assets/Carousel 4.png',
+    'assets/Carousel 5.png',
+    'assets/Carousel 6.png',
+  ];
 }
