@@ -5,6 +5,8 @@ import 'package:zairza_app/screens/domain_details.dart';
 import 'package:zairza_app/screens/events.dart';
 import 'package:zairza_app/screens/home_screen.dart';
 
+import 'Nav.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -18,10 +20,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        // scaffoldBackgroundColor: GlobalVariables.backgroundColor,
         fontFamily: GoogleFonts.spaceGrotesk().fontFamily,
       ),
-      home: HomeScreen(),
+      home: NavigationBarPage(),
     );
   }
 }
