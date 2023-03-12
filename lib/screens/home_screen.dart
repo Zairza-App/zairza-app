@@ -17,33 +17,35 @@ class HomeScreen extends StatelessWidget {
           flexibleSpace: Container(),
           backgroundColor: Colors.white,
           elevation: 0,
-          title: Row(
-            children: [
-              Image.asset('assets/Logo.png', height: 44, width: 44),
-              SizedBox(width: 12),
-              RichText(
-                text: TextSpan(
-                  text: 'Hello Buddy!!',
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                      fontFamily:
-                          GoogleFonts.spaceGrotesk().fontFamily.toString()),
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: '\nWelcome to Zairza',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: GoogleFonts.spaceGrotesk()
-                                .fontFamily
-                                .toString())),
-                  ],
+          title: Expanded(
+            child: Row(
+              children: [
+                Image.asset('assets/Logo.png', height: 44, width: 44),
+                SizedBox(width: 12),
+                RichText(
+                  text: TextSpan(
+                    text: 'Hello Buddy!!',
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.black,
+                        fontFamily:
+                            GoogleFonts.spaceGrotesk().fontFamily.toString()),
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: '\nWelcome to Zairza',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              fontFamily: GoogleFonts.spaceGrotesk()
+                                  .fontFamily
+                                  .toString())),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(width: 64),
-              CustomIconButton(),
-            ],
+                SizedBox(width: MediaQuery.of(context).size.width / 10),
+                FittedBox(child: CustomIconButton()),
+              ],
+            ),
           )),
       body: SafeArea(
         child: Stack(

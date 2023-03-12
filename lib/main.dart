@@ -4,6 +4,7 @@ import 'package:zairza_app/constants/global_variables.dart';
 import 'package:zairza_app/screens/domain_details.dart';
 import 'package:zairza_app/screens/events.dart';
 import 'package:zairza_app/screens/home_screen.dart';
+import 'package:zairza_app/screens/sign_in.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: GlobalVariables.backgroundColor,
         fontFamily: GoogleFonts.spaceGrotesk().fontFamily,
       ),
-      home: HomeScreen(),
+      home: SignIn(),
     );
   }
 }
