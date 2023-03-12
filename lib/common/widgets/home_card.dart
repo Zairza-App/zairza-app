@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
-class HomeCard extends StatelessWidget {
-  const HomeCard({super.key});
 
+
+class HomeCard extends StatelessWidget {
+  HomeCard({super.key});
   @override
   Widget build(BuildContext context) {
+      double height=MediaQuery.of(context).size.height;
+      double width=MediaQuery.of(context).size.width;
+
     return Column(
       children: [
         Stack(
@@ -36,13 +40,13 @@ class HomeCard extends StatelessWidget {
                 children: [
                   SizedBox(
                     child: SizedBox(
-                      width: 239,
-                      height: 160,
+                      width: width*0.6223958333333333,
+                      height: height*0.1908396946564885,
                       child: Stack(
                         children: [
                           Container(
-                            width: 239,
-                            height: 160,
+                            width: width*0.6223958333333333,
+                            height: height*0.1908396946564885,
                             decoration: BoxDecoration(
                               borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(8),
@@ -52,7 +56,7 @@ class HomeCard extends StatelessWidget {
                               ),
                               border: Border.all(
                                 color: Colors.black,
-                                width: 1,
+                                width: width*0.0026041666666667,
                               ),
                               color: const Color(0xffd9d9d9),
                             ),
@@ -61,8 +65,8 @@ class HomeCard extends StatelessWidget {
                             child: Align(
                               alignment: Alignment.topRight,
                               child: SizedBox(
-                                width: 604,
-                                height: 849,
+                                width: width*1.572916666666667,
+                                height: height*1.012643129770992,
                                 child: Image.asset(
                                   'assets/HomeCard1.png',
                                   fit: BoxFit.cover,
@@ -90,7 +94,7 @@ class HomeCard extends StatelessWidget {
                     ),
                     border: Border.all(
                       color: Colors.black,
-                      width: 2,
+                      width: width*0.0052083333333333 ,
                     ),
                     color: Colors.white,
                   ),
@@ -119,7 +123,7 @@ class HomeCard extends StatelessWidget {
           ],
         ),
         Container(
-          width: 243,
+          width: width*0.6328125,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
@@ -136,7 +140,7 @@ class HomeCard extends StatelessWidget {
             ),
             border: Border.all(
               color: Colors.black,
-              width: 2,
+              width: width*0.0052083333333333,
             ),
             color: Colors.white,
           ),
@@ -166,7 +170,7 @@ class HomeCard extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          width: 207,
+                          width: width*0.5390625,
                           child: Text(
                             "Internet of things (IoT) Workshop",
                             style: TextStyle(
