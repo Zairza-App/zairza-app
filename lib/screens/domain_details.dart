@@ -172,10 +172,11 @@ class DomainDetails extends StatelessWidget {
             ),
           ),
         ),
-        floatingActionButton: CustomButton(
-          onTap: () {},
-          text: 'GET NOTIFIED',
-        ),
+        // floatingActionButton: CustomButton(
+
+        //   onTap: () {},
+        //   text: 'GET NOTIFIED',
+        // ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
