@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: GlobalVariables.backgroundColor,
         fontFamily: GoogleFonts.spaceGrotesk().fontFamily,
       ),
-      routes: {
-        '/home': (context) => HomeScreen(),
-      },
+      // routes: {
+      //   '/home': (context) => HomeScreen(),
+      // },
       home: const AuthScreen(),
     );
   }
