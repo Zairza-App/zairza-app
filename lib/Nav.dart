@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-
+import 'package:zairza_app/screens/home_screen.dart';
 
 import 'Screens/Homepage.dart';
 import 'Screens/My_Profile.dart';
@@ -19,7 +18,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
   int _selectedIndex = 0;
 
   List _widgetOptions = [
-    HomePage(),
+    HomeScreen(),
     ResourcesPage(),
     ProjectPage(),
     MyProfile()
@@ -75,7 +74,6 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                         : Container(
                             height: 40,
                             width: 40,
-                            
                             child: SvgPicture.asset('assets/images/Home.svg'),
                           ),
                     label: 'Home'),
@@ -98,7 +96,6 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                         : Container(
                             height: 40,
                             width: 40,
-                           
                             child:
                                 SvgPicture.asset('assets/images/Resources.svg'),
                           ),
@@ -122,7 +119,6 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                         : Container(
                             height: 40,
                             width: 40,
-                  
                             child:
                                 SvgPicture.asset('assets/images/Projects.svg'),
                           ),
@@ -146,7 +142,6 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                         : Container(
                             height: 40,
                             width: 40,
-                         
                             child:
                                 SvgPicture.asset('assets/images/Profile.svg'),
                           ),

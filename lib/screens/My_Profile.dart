@@ -68,21 +68,21 @@ class _MyProfileState extends State<MyProfile> {
                     children: [
                       Row(
                         children: [
-                     Container(
+                          Container(
                             height: 64,
                             width: 64,
                             decoration: BoxDecoration(
                                 color: Colors.white,
-                               borderRadius: BorderRadius.circular(4),
+                                borderRadius: BorderRadius.circular(4),
                                 boxShadow: [
                                   BoxShadow(
                                       color: Colors.black, offset: Offset(2, 2))
                                 ],
                                 border: Border.all(color: Colors.black)),
-                            child: SvgPicture.asset(
-                                'assets/images/Profile1.svg'),
+                            child:
+                                SvgPicture.asset('assets/images/Profile1.svg'),
                           ),
-                     
+
                           SizedBox(width: 24),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
