@@ -22,16 +22,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        scaffoldBackgroundColor: GlobalVariables.appbarColor,
         fontFamily: GoogleFonts.spaceGrotesk().fontFamily,
       ),
-
       home: NavigationBarPage(),
-
       routes: {
         '/home': (context) => HomeScreen(),
       },
-
     );
   }
 }

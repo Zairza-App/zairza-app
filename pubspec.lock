@@ -239,6 +239,7 @@ packages:
       sha256: "2ae08f2216225427e64ad224a24354221c2c7907e448e6e0e8b57b1eb9f10ad1"
       url: "https://pub.dev"
     source: hosted
+
     version: "2.1.10"
   path_provider_platform_interface:
     dependency: transitive
