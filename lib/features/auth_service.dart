@@ -33,7 +33,7 @@ class AuthService {
     required String password,
   }) async {
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:3000/auth/login'),
+      Uri.parse('https://zairza-app-server.vercel.app/auth/login'),
       body: {
         'email': email,
         'password': password,
