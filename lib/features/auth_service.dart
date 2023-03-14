@@ -13,7 +13,7 @@ class AuthService {
     required String batch,
   }) async {
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:3000/auth/register'),
+      Uri.parse('https://zairza-app-server.vercel.app/auth/register'),
       body: {
         'name': name,
         'registration_number': registrationNumber,
@@ -33,7 +33,7 @@ class AuthService {
     required String password,
   }) async {
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:3000/auth/login'),
+      Uri.parse('https://zairza-app-server.vercel.app/auth/login'),
       body: {
         'email': email,
         'password': password,
