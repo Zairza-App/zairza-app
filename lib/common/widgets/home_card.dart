@@ -34,7 +34,7 @@ class HomeCard extends StatelessWidget {
               child: Stack(
                 children: [
                   Container(
-                    width: width * 0.6223958333333333,
+                    width: width * 0.5623958333333333,
                     height: height * 0.1908396946564885,
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(
@@ -108,7 +108,7 @@ class HomeCard extends StatelessWidget {
           ],
         ),
         Container(
-          width: width * 0.6328125,
+          width: width * 0.5728125,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
