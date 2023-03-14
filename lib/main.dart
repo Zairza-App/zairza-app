@@ -7,6 +7,8 @@ import 'package:zairza_app/screens/events.dart';
 import 'package:zairza_app/screens/home_screen.dart';
 import 'package:zairza_app/screens/sign_in.dart';
 
+import 'Nav.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,13 +22,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        // scaffoldBackgroundColor: GlobalVariables.backgroundColor,
         fontFamily: GoogleFonts.spaceGrotesk().fontFamily,
       ),
+
+      home: NavigationBarPage(),
+
       routes: {
         '/home': (context) => HomeScreen(),
       },
-      home: const AuthScreen(),
+
     );
   }
 }
