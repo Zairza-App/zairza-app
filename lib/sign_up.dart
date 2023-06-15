@@ -40,7 +40,7 @@ class _SignUpState extends State<SignUp> {
 
   @override
   Widget build(BuildContext context) {
-    var _mediaQuery = MediaQuery.of(context);
+    var mediaQuery = MediaQuery.of(context);
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -54,7 +54,7 @@ class _SignUpState extends State<SignUp> {
                   children: [
                     Image.asset('assets/illustrations/image1.png'),
                     SizedBox(
-                      height: _mediaQuery.size.height * 0.156,
+                      height: mediaQuery.size.height * 0.156,
                     ),
                     Image.asset('assets/illustrations/image2.png')
                   ],
@@ -67,14 +67,14 @@ class _SignUpState extends State<SignUp> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.0778,
+                    height: mediaQuery.size.height * 0.0778,
                   ),
                   InkWell(
                     onTap: () {},
                     child: Image.asset('assets/icons/backbutton.png'),
                   ),
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.0259,
+                    height: mediaQuery.size.height * 0.0259,
                   ),
                   Text(
                     'One step away...',
@@ -98,37 +98,37 @@ class _SignUpState extends State<SignUp> {
                     )),
                   ),
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.0259,
+                    height: mediaQuery.size.height * 0.0259,
                   ),
                   Row(
                     children: [
                       CustomTextfield(
                           hinttext: 'First name',
-                          width: (_mediaQuery.size.width - 64) * 0.5,
-                          height: _mediaQuery.size.height * 0.069),
+                          width: (mediaQuery.size.width - 64) * 0.5,
+                          height: mediaQuery.size.height * 0.069),
                       const SizedBox(
                         width: 16,
                       ),
                       CustomTextfield(
                           hinttext: 'Last name',
-                          width: (_mediaQuery.size.width - 64) * 0.5,
-                          height: _mediaQuery.size.height * 0.069),
+                          width: (mediaQuery.size.width - 64) * 0.5,
+                          height: mediaQuery.size.height * 0.069),
                     ],
                   ),
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.017,
+                    height: mediaQuery.size.height * 0.017,
                   ),
                   CustomTextfield(
                       hinttext: 'E-mail',
-                      width: _mediaQuery.size.width - 48,
-                      height: _mediaQuery.size.height * 0.069),
+                      width: mediaQuery.size.width - 48,
+                      height: mediaQuery.size.height * 0.069),
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.017,
+                    height: mediaQuery.size.height * 0.017,
                   ),
                   //password
                   Container(
-                    height: _mediaQuery.size.height * 0.069,
-                    width: _mediaQuery.size.width - 48,
+                    height: mediaQuery.size.height * 0.069,
+                    width: mediaQuery.size.width - 48,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(
@@ -164,16 +164,16 @@ class _SignUpState extends State<SignUp> {
                   ),
 
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.017,
+                    height: mediaQuery.size.height * 0.017,
                   ),
 
                   //zairza id
                   CustomTextfield(
                       hinttext: 'Zairza ID',
-                      width: _mediaQuery.size.width - 48,
-                      height: _mediaQuery.size.height * 0.069),
+                      width: mediaQuery.size.width - 48,
+                      height: mediaQuery.size.height * 0.069),
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.017,
+                    height: mediaQuery.size.height * 0.017,
                   ),
 
                   //branch and batch
@@ -181,8 +181,8 @@ class _SignUpState extends State<SignUp> {
                     children: [
                       //branch
                       Container(
-                        height: _mediaQuery.size.height * 0.069,
-                        width: (_mediaQuery.size.width - 64) * 0.5,
+                        height: mediaQuery.size.height * 0.069,
+                        width: (mediaQuery.size.width - 64) * 0.5,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
@@ -221,13 +221,13 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                       SizedBox(
-                        width: _mediaQuery.size.height * 0.017,
+                        width: mediaQuery.size.height * 0.017,
                       ),
 
                       //batch
                       Container(
-                        height: _mediaQuery.size.height * 0.069,
-                        width: (_mediaQuery.size.width - 64) * 0.5,
+                        height: mediaQuery.size.height * 0.069,
+                        width: (mediaQuery.size.width - 64) * 0.5,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
@@ -270,15 +270,15 @@ class _SignUpState extends State<SignUp> {
 
                   //phone number
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.017,
+                    height: mediaQuery.size.height * 0.017,
                   ),
                   CustomTextfield(
                     hinttext: 'Phone number',
-                    width: _mediaQuery.size.width - 48,
-                    height: _mediaQuery.size.height * 0.069,
+                    width: mediaQuery.size.width - 48,
+                    height: mediaQuery.size.height * 0.069,
                   ),
                   SizedBox(
-                    height: _mediaQuery.size.height * 0.034,
+                    height: mediaQuery.size.height * 0.034,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -286,11 +286,11 @@ class _SignUpState extends State<SignUp> {
                       CustomButton(
                         text: 'Sign up',
                         onTap: () {},
-                        width: _mediaQuery.size.width - 52,
+                        width: mediaQuery.size.width - 52,
                         icon: Image.asset('assets/icons/tick.png'),
                       ),
                       SizedBox(
-                        height: _mediaQuery.size.height * 0.017,
+                        height: mediaQuery.size.height * 0.017,
                       ),
                       RichText(
                         text: TextSpan(

@@ -4,7 +4,6 @@ import 'package:zairza_app/common/widgets/carousel.dart';
 import 'package:zairza_app/common/widgets/custom_icon_button.dart';
 import 'package:zairza_app/common/widgets/home_card.dart';
 
-import '../constants/global_variables.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -26,7 +25,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(right: 14, left: 14),
               child: Row(
                 children: [
-                  Image.asset('assets/Logo.png',
+                  Image.asset('assets/logo.png',
                       height: height * 0.05245, width: width * 0.114583),
                   SizedBox(width: width * 0.03125),
                   RichText(
@@ -50,9 +49,9 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   // SizedBox(width: width * 0.1666666666666667),
-                  CustomIconButton(),
+                  const CustomIconButton(),
                 ],
               ),
             )),
@@ -62,13 +61,13 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(right: 24, left: 24),
               child: Column(
                 children: [
-                  CarouselImage(),
+                  const CarouselImage(),
                   SizedBox(height: height * 0.0286259541984733),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Upcoming Events",
                         textAlign: TextAlign.justify,
                         style: TextStyle(
@@ -80,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(width: width * 0.0208333333333333),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             "See all",
                             style: TextStyle(
                               color: Colors.black,
@@ -96,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: Icon(Icons.arrow_forward),
+                            child: const Icon(Icons.arrow_forward),
                           ),
                         ],
                       ),
@@ -106,13 +105,13 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: height * 0.0095419847328244,
                   ),
-                  Container(
+                  SizedBox(
                       height: 290,
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
                           itemBuilder: (BuildContext context, index) {
-                            return Padding(
+                            return const Padding(
                               padding: EdgeInsets.only(right: 20),
                               child: HomeCard(),
                             );
@@ -134,7 +133,7 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Ongoing Projects",
                         textAlign: TextAlign.justify,
                         style: TextStyle(
@@ -146,7 +145,7 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(width: width * 0.0208333333333333),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             "See all",
                             style: TextStyle(
                               color: Colors.black,
@@ -162,7 +161,7 @@ class HomeScreen extends StatelessWidget {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: Icon(Icons.arrow_forward),
+                            child: const Icon(Icons.arrow_forward),
                           ),
                         ],
                       ),
@@ -172,13 +171,13 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: height * 0.0095419847328244,
                   ),
-                  Container(
+                  SizedBox(
                       height: 290,
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
                           itemBuilder: (BuildContext context, index) {
-                            return Padding(
+                            return const Padding(
                               padding: EdgeInsets.only(right: 20),
                               child: HomeCard(),
                             );

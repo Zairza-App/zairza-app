@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:zairza_app/screens/home_screen.dart';
 
-import 'Screens/Homepage.dart';
 import 'Screens/My_Profile.dart';
 import 'Screens/Projects.dart';
 import 'Screens/Resources.dart';
@@ -17,18 +16,18 @@ class NavigationBarPage extends StatefulWidget {
 class _NavigationBarPageState extends State<NavigationBarPage> {
   int _selectedIndex = 0;
 
-  List _widgetOptions = [
-    HomeScreen(),
-    ResourcesPage(),
-    ProjectPage(),
-    MyProfile()
+  final List _widgetOptions = [
+    const HomeScreen(),
+    const ResourcesPage(),
+    const ProjectPage(),
+    const MyProfile()
   ];
 
   get isSelected => true;
 
-  void _onItemTapped(int _widgetOptions) {
+  void _onItemTapped(int widgetOptions) {
     setState(() {
-      _selectedIndex = _widgetOptions;
+      _selectedIndex = widgetOptions;
     });
   }
 
@@ -41,16 +40,16 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
     return Scaffold(
         body: _widgetOptions[_selectedIndex],
         bottomNavigationBar: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               border: Border(top: BorderSide(color: Colors.black, width: 4))),
           child: BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
               unselectedItemColor: Colors.black,
-              unselectedLabelStyle: TextStyle(
+              unselectedLabelStyle: const TextStyle(
                   fontFamily: 'Space_Grotesk', fontWeight: FontWeight.bold),
-              selectedLabelStyle: TextStyle(
+              selectedLabelStyle: const TextStyle(
                   fontFamily: 'Space_Grotesk', fontWeight: FontWeight.bold),
-              selectedItemColor: Color(0xffFF8B2C),
+              selectedItemColor: const Color(0xffFF8B2C),
               showUnselectedLabels: true,
               currentIndex: _selectedIndex,
               onTap: _onItemTapped,
@@ -63,7 +62,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(4),
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                       color: Colors.black, offset: Offset(2, 2))
                                 ],
@@ -71,7 +70,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             child:
                                 SvgPicture.asset('assets/images/Homecolor.svg'),
                           )
-                        : Container(
+                        : SizedBox(
                             height: 40,
                             width: 40,
                             child: SvgPicture.asset('assets/images/Home.svg'),
@@ -85,7 +84,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(4),
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                       color: Colors.black, offset: Offset(2, 2))
                                 ],
@@ -93,7 +92,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             child: SvgPicture.asset(
                                 'assets/images/Resourcescolor.svg'),
                           )
-                        : Container(
+                        : SizedBox(
                             height: 40,
                             width: 40,
                             child:
@@ -108,7 +107,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(4),
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                       color: Colors.black, offset: Offset(2, 2))
                                 ],
@@ -116,7 +115,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             child: SvgPicture.asset(
                                 'assets/images/Projectscolor.svg'),
                           )
-                        : Container(
+                        : SizedBox(
                             height: 40,
                             width: 40,
                             child:
@@ -131,7 +130,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(4),
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                       color: Colors.black, offset: Offset(2, 2))
                                 ],
@@ -139,7 +138,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             child: SvgPicture.asset(
                                 'assets/images/Profilecolor.svg'),
                           )
-                        : Container(
+                        : SizedBox(
                             height: 40,
                             width: 40,
                             child:

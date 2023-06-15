@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zairza_app/constants/global_variables.dart';
-import 'package:zairza_app/features/auth_screen.dart';
-import 'package:zairza_app/screens/domain_details.dart';
-import 'package:zairza_app/screens/events.dart';
 import 'package:zairza_app/screens/home_screen.dart';
-import 'package:zairza_app/screens/sign_in.dart';
-
+// import 'package:zairza_app/screens/events.dart';
+// import 'package:zairza_app/screens/sign_in.dart';
+// import 'package:zairza_app/sign_up.dart';
 import 'Nav.dart';
 
 void main() {
@@ -25,9 +23,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: GlobalVariables.appbarColor,
         fontFamily: GoogleFonts.spaceGrotesk().fontFamily,
       ),
-      home: NavigationBarPage(),
+      home: const NavigationBarPage(),
       routes: {
-        '/home': (context) => HomeScreen(),
+        '/home': (context) => const HomeScreen(),
       },
     );
   }

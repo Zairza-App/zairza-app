@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeCard extends StatelessWidget {
-  HomeCard({super.key});
+  const HomeCard({super.key});
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -13,7 +13,7 @@ class HomeCard extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Color(0xff000000),
                     blurRadius: 0,
@@ -57,7 +57,7 @@ class HomeCard extends StatelessWidget {
                         width: width * 1.572916666666667,
                         height: height * 1.012643129770992,
                         child: Image.asset(
-                          'assets/HomeCard1.png',
+                          'assets/images/HomeCard1.png',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -87,11 +87,11 @@ class HomeCard extends StatelessWidget {
                     horizontal: 16,
                     vertical: 8,
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         "20th Feb 2023",
                         style: TextStyle(
@@ -110,14 +110,14 @@ class HomeCard extends StatelessWidget {
         Container(
           width: width * 0.5728125,
           decoration: BoxDecoration(
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Color(0xff000000),
                 blurRadius: 0,
                 offset: Offset(4, 4),
               )
             ],
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(0),
               topRight: Radius.circular(0),
               bottomLeft: Radius.circular(8),
@@ -146,7 +146,7 @@ class HomeCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "HARDWARE",
                           style: TextStyle(
                             color: Color(0xffef7a6b),
@@ -156,7 +156,7 @@ class HomeCard extends StatelessWidget {
                         ),
                         SizedBox(
                           width: width * 0.5390625,
-                          child: Text(
+                          child: const Text(
                             "Internet of things (IoT) Workshop",
                             style: TextStyle(
                               color: Colors.black,

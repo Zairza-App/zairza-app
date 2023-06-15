@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:zairza_app/constants/global_variables.dart';
-import 'home_card.dart';
 
 class CarouselImage extends StatelessWidget {
   const CarouselImage({super.key});
@@ -23,7 +22,7 @@ class CarouselImage extends StatelessWidget {
                     decoration: BoxDecoration(
                       border: Border.all(width: 3),
                       borderRadius: BorderRadius.circular(8),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Color(0xff000000),
                           blurRadius: 0,

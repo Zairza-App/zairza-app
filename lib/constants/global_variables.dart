@@ -20,8 +20,8 @@ class GlobalVariables {
 
   //Images
   static const List<String> carouselImages = [
-    'assets/Carousel 4.png',
-    'assets/Carousel 5.png',
-    'assets/Carousel 6.png',
+    'assets/images/Carousel 4.png',
+    'assets/images/Carousel 5.png',
+    'assets/images/Carousel 6.png',
   ];
 }

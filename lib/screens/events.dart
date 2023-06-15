@@ -12,18 +12,18 @@ class Events extends StatefulWidget {
 class _EventsState extends State<Events> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    TabController _tabController = TabController(length: 4, vsync: this);
+    TabController tabController = TabController(length: 4, vsync: this);
 
     return Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(124), // here the desired height
+          preferredSize: const Size.fromHeight(124), // here the desired height
           child: AppBar(
             toolbarHeight: 124.0,
             automaticallyImplyLeading: false,
             flexibleSpace: Container(),
             backgroundColor: GlobalVariables.appbarColor,
             elevation: 0,
-            title: Text(
+            title: const Text(
               "UPCOMING EVENTS",
               style: TextStyle(
                 color: Colors.black,
@@ -38,8 +38,8 @@ class _EventsState extends State<Events> with TickerProviderStateMixin {
             Expanded(
               child: Container(
                 child: TabBar(
-                  controller: _tabController,
-                  tabs: [
+                  controller: tabController,
+                  tabs: const [
                     Tab(
                       text: "ALL EVENTS",
                     ),
@@ -59,8 +59,8 @@ class _EventsState extends State<Events> with TickerProviderStateMixin {
             Expanded(
               child: Container(
                 child: TabBarView(
-                  controller: _tabController,
-                  children: [
+                  controller: tabController,
+                  children: const [
                     Text('data'),
                     Text('data'),
                     Text('data'),

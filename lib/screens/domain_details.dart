@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:zairza_app/common/widgets/custom_button.dart';
 import 'package:zairza_app/constants/global_variables.dart';
 
 class DomainDetails extends StatelessWidget {
@@ -12,7 +9,7 @@ class DomainDetails extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(124),
+          preferredSize: const Size.fromHeight(124),
           child: AppBar(
             toolbarHeight: 124.0,
             automaticallyImplyLeading: false,
@@ -20,7 +17,7 @@ class DomainDetails extends StatelessWidget {
             backgroundColor: GlobalVariables.appbarColor,
             elevation: 0,
             centerTitle: true,
-            title: Text(
+            title: const Text(
               "INTERNET OF THINGS (IOT) WORKSHOP",
               style: TextStyle(
                 color: Colors.black,
@@ -52,7 +49,7 @@ class DomainDetails extends StatelessWidget {
                           horizontal: 16,
                           vertical: 12,
                         ),
-                        child: Row(
+                        child: const Row(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +65,7 @@ class DomainDetails extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
@@ -82,7 +79,7 @@ class DomainDetails extends StatelessWidget {
                           horizontal: 16,
                           vertical: 12,
                         ),
-                        child: Row(
+                        child: const Row(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,9 +99,9 @@ class DomainDetails extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 24),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                const SizedBox(height: 24),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 32.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -132,7 +129,7 @@ class DomainDetails extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32.0),
                   child: Container(
@@ -140,7 +137,7 @@ class DomainDetails extends StatelessWidget {
                     height: 222,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Color(0xff000000),
                           blurRadius: 0,
@@ -156,9 +153,9 @@ class DomainDetails extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 24),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                const SizedBox(height: 24),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 32.0),
                   child: Text(
                     'The Internet of things (IoT) describes physical objects (or groups of such objects) with sensors, processing ability, software and other technologies that connect and exchange data with other devices and systems over the Internet or other communications networks. Internet of things has been considered a misnomer because devices do not need to be connected to the public internet, they only need to be connected to a network and be individually addressable.The Internet of things (IoT) describes physical objects (or groups of such objects) with sensors, processing ability, software and other technologies that connect and exchange data with other devices and systems over the Internet or other communications networks. Internet of things has been considered a misnomer because devices do not need to be connected to the public internet, they only need to be connected to a network and be individually addressable.',
                     style: TextStyle(

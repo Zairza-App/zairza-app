@@ -11,22 +11,22 @@ class MyProfile extends StatefulWidget {
 class _MyProfileState extends State<MyProfile> {
   @override
   Widget build(BuildContext context) {
-    var _mediaQuery = MediaQuery.of(context);
+    var mediaQuery = MediaQuery.of(context);
     return Scaffold(
       // bottomNavigationBar: NavigationBarPage(),
       body: Padding(
         padding: const EdgeInsets.only(top: 78.0, left: 24, right: 24),
-        child: Container(
-          height: _mediaQuery.size.height * 1,
-          width: _mediaQuery.size.width * 1,
+        child: SizedBox(
+          height: mediaQuery.size.height * 1,
+          width: mediaQuery.size.width * 1,
           child: Column(
             children: [
-              Container(
-                width: _mediaQuery.size.width * 0.88,
+              SizedBox(
+                width: mediaQuery.size.width * 0.88,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'My Profile',
                       style: TextStyle(
                           fontSize: 28,
@@ -37,7 +37,7 @@ class _MyProfileState extends State<MyProfile> {
                     Container(
                         // color: Colors.orange,
                         decoration: BoxDecoration(
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                   color: Colors.black,
                                   //spreadRadius: 2,
@@ -45,19 +45,26 @@ class _MyProfileState extends State<MyProfile> {
                             ],
                             borderRadius: BorderRadius.circular(4),
                             border: Border.all(color: Colors.black, width: 2),
-                            color: Color(0xffFF8B2C)),
+                            color: const Color(0xffFF8B2C)),
                         height: 40,
                         width: 40,
-                        child: Icon(Icons.more_horiz))
+                        child: const Icon(Icons.more_horiz))
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 28,
               ),
               Container(
-                width: _mediaQuery.size.width * 0.88,
+                width: mediaQuery.size.width * 0.88,
                 height: 230,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: const [
+                      BoxShadow(color: Colors.black, offset: Offset(2, 2))
+                    ],
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.black, width: 2)),
                 // height: 230,
                 // width: 370,
                 child: Padding(
@@ -74,7 +81,7 @@ class _MyProfileState extends State<MyProfile> {
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(4),
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                       color: Colors.black, offset: Offset(2, 2))
                                 ],
@@ -83,8 +90,8 @@ class _MyProfileState extends State<MyProfile> {
                                 SvgPicture.asset('assets/images/Profile1.svg'),
                           ),
 
-                          SizedBox(width: 24),
-                          Column(
+                          const SizedBox(width: 24),
+                          const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
@@ -121,10 +128,10 @@ class _MyProfileState extends State<MyProfile> {
                           // Text('Abhinaba Dash',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),)
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
-                      Text(
+                      const Text(
                         'Domain -',
                         style: TextStyle(
                             fontFamily: 'Space_Grotesk',
@@ -132,18 +139,18 @@ class _MyProfileState extends State<MyProfile> {
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 2,
                       ),
-                      Text(
+                      const Text(
                         'Flutter | Graphic design | Video editing',
                         style: TextStyle(
                             fontFamily: 'Space_Grotesk', color: Colors.black),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
-                      Text(
+                      const Text(
                         'Join me on-',
                         style: TextStyle(
                             fontFamily: 'Space_Grotesk',
@@ -151,44 +158,44 @@ class _MyProfileState extends State<MyProfile> {
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 4,
                       ),
                       Row(
                         children: [
                           Image.asset('assets/images/Messenger.png'),
-                          SizedBox(width: 16),
+                          const SizedBox(width: 16),
                           Image.asset('assets/images/Linkdin.png'),
-                          SizedBox(width: 16),
+                          const SizedBox(width: 16),
                           Image.asset('assets/images/BE.png'),
-                          SizedBox(width: 16),
+                          const SizedBox(width: 16),
                           Image.asset('assets/images/Github.png')
                         ],
                       ),
                     ],
                   ),
                 ),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(color: Colors.black, offset: Offset(2, 2))
-                    ],
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.black, width: 2)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               Container(
                 height: 80,
-                width: _mediaQuery.size.width * 0.88,
+                width: mediaQuery.size.width * 0.88,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: const [
+                      BoxShadow(color: Colors.black, offset: Offset(2, 2))
+                    ],
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.black, width: 2)),
                 // width: 370,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
+                    const Padding(
+                      padding: EdgeInsets.only(
                           top: 24.0, bottom: 24, left: 20),
                       child: Text(
                         'Achievements',
@@ -205,37 +212,37 @@ class _MyProfileState extends State<MyProfile> {
                           height: 40,
                           width: 40,
                           decoration: BoxDecoration(
-                              color: Color(0xffFF90E8),
+                              color: const Color(0xffFF90E8),
                               border: Border.all(color: Colors.black, width: 2),
                               borderRadius: BorderRadius.circular(4)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_drop_down,
                             size: 30,
                           )),
                     )
                   ],
                 ),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(color: Colors.black, offset: Offset(2, 2))
-                    ],
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.black, width: 2)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               Container(
                 height: 80,
-                width: _mediaQuery.size.width * 0.88,
+                width: mediaQuery.size.width * 0.88,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: const [
+                      BoxShadow(color: Colors.black, offset: Offset(2, 2))
+                    ],
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.black, width: 2)),
                 //width: 370,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
+                    const Padding(
+                      padding: EdgeInsets.only(
                           top: 24.0, bottom: 24, left: 20),
                       child: Text(
                         'Jobs/ Internships',
@@ -252,29 +259,22 @@ class _MyProfileState extends State<MyProfile> {
                           height: 40,
                           width: 40,
                           decoration: BoxDecoration(
-                              color: Color(0xffFF90E8),
+                              color: const Color(0xffFF90E8),
                               border: Border.all(color: Colors.black, width: 2),
                               borderRadius: BorderRadius.circular(4)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_drop_down,
                             size: 30,
                           )),
                     )
                   ],
                 ),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(color: Colors.black, offset: Offset(2, 2))
-                    ],
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.black, width: 2)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
-              Container(
-                width: _mediaQuery.size.width * 0.88,
+              SizedBox(
+                width: mediaQuery.size.width * 0.88,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -284,18 +284,18 @@ class _MyProfileState extends State<MyProfile> {
                         height: 40,
                         width: 40,
                         decoration: BoxDecoration(
-                          color: Color(0xff23A094),
+                          color: const Color(0xff23A094),
                           borderRadius: BorderRadius.circular(4),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(color: Colors.black, offset: Offset(2, 2))
                           ],
                           border: Border.all(color: Colors.black, width: 2),
                         ),
-                        child: Icon(Icons.add_box_outlined)),
+                        child: const Icon(Icons.add_box_outlined)),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
             ],

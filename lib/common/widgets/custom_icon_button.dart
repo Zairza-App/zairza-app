@@ -14,14 +14,14 @@ class CustomIconButton extends StatelessWidget {
           color: Colors.black,
           width: width * 0.0078125,
         ),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Color(0xff000000),
             blurRadius: 0,
             offset: Offset(4, 4),
           ),
         ],
-        color: Color(0xffffc700),
+        color: const Color(0xffffc700),
       ),
       padding: const EdgeInsets.all(6),
       child: Row(
@@ -29,7 +29,7 @@ class CustomIconButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          SizedBox(
             width: width * 0.0625,
             height: height * 0.0286259541984733,
             child: Row(
@@ -43,7 +43,7 @@ class CustomIconButton extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.more_horiz,
                     color: Colors.black,
                   ),
