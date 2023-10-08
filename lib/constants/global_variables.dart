@@ -72,11 +72,10 @@ class GlobalVariables {
   );
   //TEXT REGULAR 16
   static const textRegular_16 = TextStyle(
-    fontFamily: 'Space_Grotesk',
-    fontSize: 16,
-    letterSpacing: 0.2,
-    height: 24
-  );
+      fontFamily: 'Space_Grotesk',
+      fontSize: 16,
+      letterSpacing: 0.2,
+      height: 24);
   //TEXT MEDIUM 16
   static const textMedium_16 = TextStyle(
     fontFamily: 'Space_Grotesk',
@@ -95,11 +94,10 @@ class GlobalVariables {
   );
   //TEXT REGULAR 18
   static const textRegular_18 = TextStyle(
-    fontFamily: 'Space_Grotesk',
-    fontSize: 18,
-    letterSpacing: 0.2,
-    height: 28
-  );
+      fontFamily: 'Space_Grotesk',
+      fontSize: 18,
+      letterSpacing: 0.2,
+      height: 28);
   //TEXT MEDIUM 18
   static const textMedium_18 = TextStyle(
     fontFamily: 'Space_Grotesk',
@@ -118,11 +116,10 @@ class GlobalVariables {
   );
   //TEXT REGULAR 20
   static const textRegular_20 = TextStyle(
-    fontFamily: 'Space_Grotesk',
-    fontSize: 20,
-    letterSpacing: 0.2,
-    height: 24
-  );
+      fontFamily: 'Space_Grotesk',
+      fontSize: 20,
+      letterSpacing: 0.2,
+      height: 24);
   //TEXT MEDIUM 20
   static const textMedium_20 = TextStyle(
     fontFamily: 'Space_Grotesk',
@@ -141,11 +138,10 @@ class GlobalVariables {
   );
   //TEXT REGULAR 24
   static const textRegular_24 = TextStyle(
-    fontFamily: 'Space_Grotesk',
-    fontSize: 24,
-    letterSpacing: 0.2,
-    height: 28
-  );
+      fontFamily: 'Space_Grotesk',
+      fontSize: 24,
+      letterSpacing: 0.2,
+      height: 28);
   //TEXT MEDIUM 24
   static const textMedium_24 = TextStyle(
     fontFamily: 'Space_Grotesk',
@@ -160,6 +156,143 @@ class GlobalVariables {
     fontSize: 24,
     letterSpacing: 0.2,
     height: 28,
+    fontWeight: FontWeight.w900,
+  );
+  //TEXT REGULAR 28
+  static const textRegular_28 = TextStyle(
+      fontFamily: 'Space_Grotesk',
+      fontSize: 28,
+      letterSpacing: 0.2,
+      height: 34);
+  //TEXT MEDIUM 28
+  static const textMedium_28 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 28,
+    letterSpacing: 0.2,
+    height: 34,
+    fontWeight: FontWeight.w700,
+  );
+  //TEXT BOLD 28
+  static const textBold_28 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 28,
+    letterSpacing: 0.2,
+    height: 34,
+    fontWeight: FontWeight.w900,
+  );
+  //TEXT REGULAR 32
+  static const textRegular_32 = TextStyle(
+      fontFamily: 'Space_Grotesk',
+      fontSize: 32,
+      letterSpacing: 0.2,
+      height: 38);
+  //TEXT MEDIUM 32
+  static const textMedium_32 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 32,
+    letterSpacing: 0.2,
+    height: 38,
+    fontWeight: FontWeight.w700,
+  );
+  //TEXT BOLD 32
+  static const textBold_32 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 32,
+    letterSpacing: 0.2,
+    height: 38,
+    fontWeight: FontWeight.w900,
+  );
+  //TEXT REGULAR 36
+  static const textRegular_36 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 36,
+    letterSpacing: 0.2,
+    height: 44,
+  );
+  //TEXT MEDIUM 36
+  static const textMedium_36 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 36,
+    letterSpacing: 0.2,
+    height: 44,
+    fontWeight: FontWeight.w700,
+  );
+  //TEXT BOLD 36
+  static const textBold_36 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 36,
+    letterSpacing: 0.2,
+    height: 44,
+    fontWeight: FontWeight.w900,
+  );
+  //TEXT REGULAR 40
+  static const textRegular_40 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 40,
+    letterSpacing: 0.2,
+    height: 48,
+  );
+  //TEXT MEDIUM 40
+  static const textMedium_40 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 40,
+    letterSpacing: 0.2,
+    height: 48,
+    fontWeight: FontWeight.w700,
+  );
+  //TEXT BOLD 40
+  static const textBold_40 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 40,
+    letterSpacing: 0.2,
+    height: 48,
+    fontWeight: FontWeight.w900,
+  );
+  //TEXT REGULAR 48
+  static const textRegular_48 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 48,
+    letterSpacing: 0.2,
+    height: 58,
+  );
+  //TEXT MEDIUM 48
+  static const textMedium_48 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 48,
+    letterSpacing: 0.2,
+    height: 58,
+    fontWeight: FontWeight.w700,
+  );
+  //TEXT BOLD 48
+  static const textBold_48 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 48,
+    letterSpacing: 0.2,
+    height: 58,
+    fontWeight: FontWeight.w900,
+  );
+
+  //TEXT REGULAR 60
+  static const textRegular_60 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 60,
+    letterSpacing: 0.2,
+    height: 72,
+  );
+  //TEXT MEDIUM 60
+  static const textMedium_60 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 60,
+    letterSpacing: 0.2,
+    height: 72,
+    fontWeight: FontWeight.w700,
+  );
+  //TEXT BOLD 60
+  static const textBold_60 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 60,
+    letterSpacing: 0.2,
+    height: 72,
     fontWeight: FontWeight.w900,
   );
 }
