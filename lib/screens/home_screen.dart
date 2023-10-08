@@ -4,7 +4,6 @@ import 'package:zairza_app/common/widgets/carousel.dart';
 import 'package:zairza_app/common/widgets/custom_icon_button.dart';
 import 'package:zairza_app/common/widgets/home_card.dart';
 
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -57,14 +56,13 @@ class HomeScreen extends StatelessWidget {
             )),
         body: SingleChildScrollView(
           child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 24, left: 24),
-              child: Column(
-                children: [
-                  const CarouselImage(),
-                  SizedBox(height: height * 0.0286259541984733),
-
-                  Row(
+            child: Column(
+              children: [
+                const CarouselImage(),
+                SizedBox(height: height * 0.0286259541984733),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
@@ -73,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 20,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w900,
                         ),
                       ),
                       SizedBox(width: width * 0.0208333333333333),
@@ -85,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.black,
                               fontSize: 14,
                               decoration: TextDecoration.underline,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w700,
                             ),
                           ),
                           SizedBox(width: width * 0.0104166666666667),
@@ -101,36 +99,39 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
 
-                  SizedBox(
-                    height: height * 0.0095419847328244,
-                  ),
-                  SizedBox(
-                      height: 290,
-                      child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          shrinkWrap: true,
-                          itemBuilder: (BuildContext context, index) {
-                            return const Padding(
-                              padding: EdgeInsets.only(right: 20),
-                              child: HomeCard(),
-                            );
-                          })),
-                  // Expanded(
-                  //   child: ListView.builder(
-                  //     scrollDirection: Axis.horizontal,
-                  //     itemCount: 4,
-                  //     itemBuilder: (BuildContext context, int index) {
-                  //       return Padding(
-                  //         padding: const EdgeInsets.only(right: 20),
-                  //         child: HomeCard(),
-                  //       );
-                  //     },
-                  //   ),
-                  // ),
-                  // SizedBox(height: 8),
-                  SizedBox(height: height * 0.0286259541984733),
-                  Row(
+                SizedBox(
+                  height: height * 0.0095419847328244,
+                ),
+                SizedBox(
+                    height: 290,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        itemBuilder: (BuildContext context, index) {
+                          return const Padding(
+                            padding: EdgeInsets.only(left: 24),
+                            child: HomeCard(),
+                          );
+                        })),
+                // Expanded(
+                //   child: ListView.builder(
+                //     scrollDirection: Axis.horizontal,
+                //     itemCount: 4,
+                //     itemBuilder: (BuildContext context, int index) {
+                //       return Padding(
+                //         padding: const EdgeInsets.only(right: 20),
+                //         child: HomeCard(),
+                //       );
+                //     },
+                //   ),
+                // ),
+                // SizedBox(height: 8),
+                SizedBox(height: height * 0.0286259541984733),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
@@ -151,7 +152,7 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.black,
                               fontSize: 14,
                               decoration: TextDecoration.underline,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w800,
                             ),
                           ),
                           SizedBox(width: width * 0.0104166666666667),
@@ -167,23 +168,23 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
 
-                  SizedBox(
-                    height: height * 0.0095419847328244,
-                  ),
-                  SizedBox(
-                      height: 290,
-                      child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          shrinkWrap: true,
-                          itemBuilder: (BuildContext context, index) {
-                            return const Padding(
-                              padding: EdgeInsets.only(right: 20),
-                              child: HomeCard(),
-                            );
-                          })),
-                ],
-              ),
+                SizedBox(
+                  height: height * 0.0095419847328244,
+                ),
+                SizedBox(
+                    height: 290,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        itemBuilder: (BuildContext context, index) {
+                          return const Padding(
+                            padding: EdgeInsets.only(left: 20),
+                            child: HomeCard(),
+                          );
+                        })),
+              ],
             ),
           ),
         ));

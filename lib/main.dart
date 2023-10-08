@@ -5,7 +5,7 @@ import 'package:zairza_app/screens/home_screen.dart';
 // import 'package:zairza_app/screens/events.dart';
 // import 'package:zairza_app/screens/sign_in.dart';
 // import 'package:zairza_app/sign_up.dart';
-import 'Nav.dart';
+import 'nav.dart';
 
 void main() {
   runApp(const MyApp());

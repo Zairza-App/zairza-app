@@ -35,7 +35,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
 
   @override
   Widget build(BuildContext context) {
-    var mediaQuery = MediaQuery.of(context);
+    // var mediaQuery = MediaQuery.of(context);
 
     return Scaffold(
         body: _widgetOptions[_selectedIndex],

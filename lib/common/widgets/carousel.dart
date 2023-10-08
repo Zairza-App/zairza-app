@@ -1,54 +1,72 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:zairza_app/constants/global_variables.dart';
 
-class CarouselImage extends StatelessWidget {
+class CarouselImage extends StatefulWidget {
   const CarouselImage({super.key});
 
   @override
+  State<CarouselImage> createState() => _CarouselImageState();
+}
+
+class _CarouselImageState extends State<CarouselImage> {
+  int currentIndex = 0;
+  @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: CarouselSlider(
+    return Column(children: [
+      CarouselSlider(
         items: GlobalVariables.carouselImages.map((i) {
           return Builder(
-              builder: (BuildContext context) => Container(
-                    width: width * 0.99479166667,
-                    height: height * 0.2385496183206107,
-                    decoration: BoxDecoration(
-                      border: Border.all(width: 3),
-                      borderRadius: BorderRadius.circular(8),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0xff000000),
-                          blurRadius: 0,
-                          offset: Offset(4, 4),
-                        ),
-                      ],
-                    ),
-                    child: Expanded(
+              builder: (BuildContext context) => Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8.0, vertical: 4),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0xff000000),
+                            blurRadius: 0,
+                            offset: Offset(4, 4),
+                          ),
+                        ],
+                      ),
                       child: ClipRRect(
                         child: Image.asset(
                           i,
                           fit: BoxFit.cover,
-                          height: height * 0.3053435114503817,
-                          width: width * 0.9270833333333333,
                         ),
                       ),
                     ),
                   ));
         }).toList(),
         options: CarouselOptions(
-          viewportFraction: 1,
-          height: height * 0.2385496183206107,
+          viewportFraction: 0.9,
+          aspectRatio: 191 / 100,
+          height: height * 0.21459227467,
           autoPlay: true,
-          enlargeCenterPage: true,
+          onPageChanged: (index, reason) {
+            setState(() {
+              currentIndex = index;
+            });
+          },
         ),
       ),
-    );
+      const SizedBox(
+        height: 12,
+      ),
+      DotsIndicator(
+        decorator: const DotsDecorator(
+          activeSize: Size.fromRadius(4),
+          activeColor: Colors.black,
+          color: Colors.black,
+          size: Size.fromRadius(2)
+        ),
+        dotsCount: GlobalVariables.carouselImages.length,
+        position: currentIndex,
+      )
+    ]);
   }
 }
