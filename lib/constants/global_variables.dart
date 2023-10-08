@@ -208,7 +208,6 @@ class GlobalVariables {
     fontSize: 36,
     letterSpacing: 0.2,
     height: 44,
-    fontWeight: FontWeight.w900,
   );
   //TEXT MEDIUM 36
   static const textMedium_36 = TextStyle(
@@ -216,7 +215,7 @@ class GlobalVariables {
     fontSize: 36,
     letterSpacing: 0.2,
     height: 44,
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.w700,
   );
   //TEXT BOLD 36
   static const textBold_36 = TextStyle(
@@ -232,7 +231,6 @@ class GlobalVariables {
     fontSize: 40,
     letterSpacing: 0.2,
     height: 48,
-    fontWeight: FontWeight.w900,
   );
   //TEXT MEDIUM 40
   static const textMedium_40 = TextStyle(
@@ -240,7 +238,7 @@ class GlobalVariables {
     fontSize: 40,
     letterSpacing: 0.2,
     height: 48,
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.w700,
   );
   //TEXT BOLD 40
   static const textBold_40 = TextStyle(
@@ -256,7 +254,6 @@ class GlobalVariables {
     fontSize: 48,
     letterSpacing: 0.2,
     height: 58,
-    fontWeight: FontWeight.w900,
   );
   //TEXT MEDIUM 48
   static const textMedium_48 = TextStyle(
@@ -264,7 +261,7 @@ class GlobalVariables {
     fontSize: 48,
     letterSpacing: 0.2,
     height: 58,
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.w700,
   );
   //TEXT BOLD 48
   static const textBold_48 = TextStyle(
@@ -281,7 +278,6 @@ class GlobalVariables {
     fontSize: 60,
     letterSpacing: 0.2,
     height: 72,
-    fontWeight: FontWeight.w900,
   );
   //TEXT MEDIUM 60
   static const textMedium_60 = TextStyle(
@@ -289,7 +285,7 @@ class GlobalVariables {
     fontSize: 60,
     letterSpacing: 0.2,
     height: 72,
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.w700,
   );
   //TEXT BOLD 60
   static const textBold_60 = TextStyle(
