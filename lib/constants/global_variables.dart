@@ -24,4 +24,12 @@ class GlobalVariables {
     'assets/images/Carousel 5.png',
     'assets/images/Carousel 6.png',
   ];
+
+  //textstyles
+  static const textRegular_12 = TextStyle(
+    fontFamily: 'Space_Grotesk',
+    fontSize: 12,
+    letterSpacing: 0.2,
+    height: 18
+  );
 }
