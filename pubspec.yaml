@@ -77,9 +77,9 @@ flutter:
       fonts:
         - asset: fonts/SpaceGrotesk-Regular.ttf
         - asset: fonts/SpaceGrotesk-Bold.ttf
-          weight: bold
+          weight: 900
         - asset: fonts/SpaceGrotesk-Medium.ttf
-          weight: 600
+          weight: 700
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
