@@ -10,7 +10,7 @@ class Keys {
 class GlobalVariables {
   // COLORS
 
-  static const primaryColor = Color(0xffFFC700);
+  static const primaryColor = Color(0xffFF8B2C);
   static const secondaryColor = Color(0xff23A094);
   static const backgroundColor = Color(0xffE8F1D7);
   static const appbarColor = Color(0xffFEFFFF);
@@ -37,7 +37,7 @@ class GlobalVariables {
     fontFamily: 'Space_Grotesk',
     fontSize: 12,
     letterSpacing: 0.2,
-    height: 18,
+    height: 1.5,
     fontWeight: FontWeight.w700,
   );
   //TEXT BOLD 12
@@ -45,7 +45,7 @@ class GlobalVariables {
     fontFamily: 'Space_Grotesk',
     fontSize: 12,
     letterSpacing: 0.2,
-    height: 18,
+    height: 1.5,
     fontWeight: FontWeight.w900,
   );
   //TEXT REGULAR 14
@@ -59,7 +59,7 @@ class GlobalVariables {
     fontFamily: 'Space_Grotesk',
     fontSize: 14,
     letterSpacing: 0.2,
-    height: 22,
+    height: 1.5,
     fontWeight: FontWeight.w700,
   );
   //TEXT BOLD 14
@@ -67,7 +67,7 @@ class GlobalVariables {
     fontFamily: 'Space_Grotesk',
     fontSize: 14,
     letterSpacing: 0.2,
-    height: 22,
+    height: 1.5,
     fontWeight: FontWeight.w900,
   );
   //TEXT REGULAR 16
@@ -81,7 +81,7 @@ class GlobalVariables {
     fontFamily: 'Space_Grotesk',
     fontSize: 16,
     letterSpacing: 0.2,
-    height: 24,
+    height: 1.5,
     fontWeight: FontWeight.w700,
   );
   //TEXT BOLD 16
@@ -133,7 +133,7 @@ class GlobalVariables {
     fontFamily: 'Space_Grotesk',
     fontSize: 20,
     letterSpacing: 0.2,
-    height: 24,
+    height: 1.2,
     fontWeight: FontWeight.w900,
   );
   //TEXT REGULAR 24

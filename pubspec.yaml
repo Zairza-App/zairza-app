@@ -58,6 +58,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/icons/navbarIcons/
     - assets/illustrations/
     - assets/
 

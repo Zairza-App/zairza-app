@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import './common/widgets/custom_textfield.dart';
-import './common/widgets/custom_button.dart';
+import '../common/widgets/custom_textfield.dart';
+import '../common/widgets/custom_button.dart';
 import 'package:flutter/gestures.dart';
 
 class SignUp extends StatefulWidget {

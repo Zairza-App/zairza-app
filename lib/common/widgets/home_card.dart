@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zairza_app/constants/global_variables.dart';
 
 class HomeCard extends StatelessWidget {
   const HomeCard({super.key});
@@ -12,6 +13,8 @@ class HomeCard extends StatelessWidget {
         Stack(
           children: [
             Container(
+              width: width * 0.55581395348,
+              height: height * 0.17167381974,
               decoration: BoxDecoration(
                 boxShadow: const [
                   BoxShadow(
@@ -29,41 +32,19 @@ class HomeCard extends StatelessWidget {
                 border: Border.all(
                   color: Colors.black,
                   width: 2,
+                  // strokeAlign: BorderSide.strokeAlignInside
                 ),
               ),
-              child: Stack(
-                children: [
-                  Container(
-                    width: width * 0.5623958333333333,
-                    height: height * 0.1908396946564885,
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(8),
-                        topRight: Radius.circular(8),
-                        bottomLeft: Radius.circular(0),
-                        bottomRight: Radius.circular(0),
-                      ),
-                      border: Border.all(
-                        color: Colors.black,
-                        width: width * 0.0026041666666667,
-                      ),
-                      color: const Color(0xffd9d9d9),
-                    ),
+              child: Padding(
+                padding: const EdgeInsets.only(right: 0.5),
+                child: ClipRRect(
+                  borderRadius:
+                      const BorderRadius.only(topRight: Radius.circular(4)),
+                  child: Image.asset(
+                    'assets/images/HomeCard1.png',
+                    fit: BoxFit.cover,
                   ),
-                  Positioned.fill(
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: SizedBox(
-                        width: width * 1.572916666666667,
-                        height: height * 1.012643129770992,
-                        child: Image.asset(
-                          'assets/images/HomeCard1.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
             Positioned.fill(
@@ -79,7 +60,8 @@ class HomeCard extends StatelessWidget {
                     ),
                     border: Border.all(
                       color: Colors.black,
-                      width: width * 0.0052083333333333,
+                      width: 2,
+                      // strokeAlign: BorderSide.strokeAlignOutside
                     ),
                     color: Colors.white,
                   ),
@@ -92,14 +74,7 @@ class HomeCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "20th Feb 2023",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
+                      Text("20th Feb 2023", style: GlobalVariables.textBold_14),
                     ],
                   ),
                 ),
@@ -108,25 +83,26 @@ class HomeCard extends StatelessWidget {
           ],
         ),
         Container(
-          width: width * 0.5728125,
-          decoration: BoxDecoration(
-            boxShadow: const [
+          width: width * 0.55581395348,
+          decoration: const BoxDecoration(
+            boxShadow: [
               BoxShadow(
                 color: Color(0xff000000),
                 blurRadius: 0,
                 offset: Offset(4, 4),
               )
             ],
-            borderRadius: const BorderRadius.only(
+            borderRadius: BorderRadius.only(
               topLeft: Radius.circular(0),
               topRight: Radius.circular(0),
               bottomLeft: Radius.circular(8),
               bottomRight: Radius.circular(8),
             ),
-            border: Border.all(
-              color: Colors.black,
-              width: width * 0.0052083333333333,
-            ),
+            border: BorderDirectional(
+                top: BorderSide(width: 0),
+                bottom: BorderSide(width: 2),
+                start: BorderSide(width: 2),
+                end: BorderSide(width: 2)),
             color: Colors.white,
           ),
           padding: const EdgeInsets.all(16),
@@ -146,24 +122,15 @@ class HomeCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          "HARDWARE",
-                          style: TextStyle(
-                            color: Color(0xffef7a6b),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
+                        Text("HARDWARE",
+                            style: GlobalVariables.textMedium_12.copyWith(
+                                color: GlobalVariables.primaryColor,
+                                height: 1)),
                         SizedBox(
                           width: width * 0.5390625,
-                          child: const Text(
-                            "Internet of things (IoT) Workshop",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
+                          child: Text("Internet of things (IoT) Workshop",
+                              style: GlobalVariables.textMedium_16.copyWith(
+                                  height: 1.35)),
                         ),
                       ],
                     ),

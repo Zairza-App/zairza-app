@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zairza_app/constants/global_variables.dart';
 
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton({super.key});
@@ -21,7 +22,7 @@ class CustomIconButton extends StatelessWidget {
             offset: Offset(4, 4),
           ),
         ],
-        color: const Color(0xffffc700),
+        color: GlobalVariables.primaryColor,
       ),
       padding: const EdgeInsets.all(6),
       child: Row(
