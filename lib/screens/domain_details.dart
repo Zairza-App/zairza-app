@@ -137,13 +137,7 @@ class DomainDetails extends StatelessWidget {
                     height: 222,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0xff000000),
-                          blurRadius: 0,
-                          offset: Offset(6, 6),
-                        ),
-                      ],
+                      boxShadow: GlobalVariables.shadowEffect
                     ),
                     child: Container(
                       decoration: BoxDecoration(

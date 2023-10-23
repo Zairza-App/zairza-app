@@ -20,9 +20,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
             toolbarHeight: height * 0.09451,
-            flexibleSpace: Container(
-                //color: Colors.amber,
-                ),
             backgroundColor: Colors.white,
             elevation: 0,
             title: Padding(
@@ -49,7 +46,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  // SizedBox(width: width * 0.1666666666666667),
                   const CustomIconButton(),
                 ],
               ),
@@ -57,29 +53,16 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: SafeArea(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const CarouselImage(),
                 SizedBox(height: height * 0.0286259541984733),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text("Upcoming Events",
-                          textAlign: TextAlign.justify,
-                          style: GlobalVariables.textBold_20),
-                      SizedBox(width: width * 0.0208333333333333),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const Text("See all",
-                              style: GlobalVariables.textMedium_14),
-                          SizedBox(width: width * 0.0104166666666667),
-                          const Icon(Icons.arrow_forward),
-                        ],
-                      ),
-                    ],
-                  ),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: width * 0.05581395348),
+                  child: const Text("Upcoming Events",
+                      textAlign: TextAlign.justify,
+                      style: GlobalVariables.textBold_20),
                 ),
                 SizedBox(
                   height: height * 0.0135419847328244,
@@ -90,21 +73,23 @@ class HomeScreen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
                         itemBuilder: (BuildContext context, index) {
-                          return const Padding(
-                            padding: EdgeInsets.only(left: 20),
-                            child: HomeCard(),
+                          return Padding(
+                            padding:
+                                EdgeInsets.only(left: width * 0.0465116279),
+                            child: const HomeCard(),
                           );
                         })),
                 SizedBox(height: height * 0.03004291845),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: width * 0.05581395348),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text("Ongoing Projects",
                           textAlign: TextAlign.justify,
                           style: GlobalVariables.textBold_20),
-                      SizedBox(width: width * 0.0208333333333333),
+                      const Spacer(),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -126,9 +111,10 @@ class HomeScreen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
                         itemBuilder: (BuildContext context, index) {
-                          return const Padding(
-                            padding: EdgeInsets.only(left: 20),
-                            child: HomeCard(),
+                          return Padding(
+                            padding:
+                                EdgeInsets.only(left: width * 0.0465116279),
+                            child: const HomeCard(),
                           );
                         })),
               ],

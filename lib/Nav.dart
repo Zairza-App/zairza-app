@@ -61,16 +61,17 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: Image.asset(
                               'assets/icons/navbarIcons/Homecolor.png',
-                              height: 44,
-                              width: 44,
+                              height: height*0.04721030042,
+                              width: height*0.04721030042,
                             ),
                           )
                         : Padding(
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: SizedBox(
-                              height: 40,
-                              width: 40,
-                              child: SvgPicture.asset('assets/icons/navbarIcons/Home.svg'),
+                              height: height * 0.04291845493,
+                              width: height * 0.04291845493,
+                              child: SvgPicture.asset(
+                                  'assets/icons/navbarIcons/Home.svg'),
                             ),
                           ),
                     label: 'Home'),
@@ -80,15 +81,15 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: Image.asset(
                               'assets/icons/navbarIcons/Resourcescolor.png',
-                              height: 44,
-                              width: 44,
+                              height: height*0.04721030042,
+                              width: height*0.04721030042,
                             ),
                           )
                         : Padding(
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: SizedBox(
-                              height: 40,
-                              width: 40,
+                              height: height * 0.04291845493,
+                              width: height * 0.04291845493,
                               child: SvgPicture.asset(
                                   'assets/icons/navbarIcons/Resources.svg'),
                             ),
@@ -100,15 +101,15 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: Image.asset(
                               'assets/icons/navbarIcons/Projectscolor.png',
-                              height: 44,
-                              width: 44,
+                              height: height*0.04721030042,
+                              width: height*0.04721030042,
                             ),
                           )
                         : Padding(
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: SizedBox(
-                              height: 40,
-                              width: 40,
+                              height: height * 0.04291845493,
+                              width: height * 0.04291845493,
                               child: SvgPicture.asset(
                                   'assets/icons/navbarIcons/Projects.svg'),
                             ),
@@ -120,17 +121,17 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: Image.asset(
                               'assets/icons/navbarIcons/Profilecolor.png',
-                              height: 44,
-                              width: 44,
+                              height: height*0.04721030042,
+                              width: height*0.04721030042,
                             ),
                           )
                         : Padding(
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: SizedBox(
-                              height: 40,
-                              width: 40,
-                              child:
-                                  SvgPicture.asset('assets/icons/navbarIcons/Profile.svg'),
+                              height: height * 0.04291845493,
+                              width: height * 0.04291845493,
+                              child: SvgPicture.asset(
+                                  'assets/icons/navbarIcons/Profile.svg'),
                             ),
                           ),
                     label: 'Profile'),

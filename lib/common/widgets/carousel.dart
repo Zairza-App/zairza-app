@@ -21,17 +21,11 @@ class _CarouselImageState extends State<CarouselImage> {
           return Builder(
               builder: (BuildContext context) => Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 8.0, vertical: 4),
+                         vertical: 4),
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0xff000000),
-                            blurRadius: 0,
-                            offset: Offset(4, 4),
-                          ),
-                        ],
+                        boxShadow: GlobalVariables.shadowEffect
                       ),
                       child: ClipRRect(
                         child: Image.asset(

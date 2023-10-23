@@ -8,6 +8,15 @@ class Keys {
 }
 
 class GlobalVariables {
+  
+  //shadow effect
+  static const shadowEffect = [
+    BoxShadow(color: Colors.black, offset: Offset(1, 1)),
+    BoxShadow(color: Colors.black, offset: Offset(2, 2)),
+    BoxShadow(color: Colors.black, offset: Offset(3, 3)),
+    BoxShadow(color: Colors.black, offset: Offset(4, 4))
+  ];
+
   // COLORS
 
   static const primaryColor = Color(0xffFF8B2C);
@@ -31,7 +40,7 @@ class GlobalVariables {
       fontFamily: 'Space_Grotesk',
       fontSize: 12,
       letterSpacing: 0.2,
-      height: 18);
+      height: 1.5);
   //TEXT MEDIUM 12
   static const textMedium_12 = TextStyle(
     fontFamily: 'Space_Grotesk',
@@ -53,7 +62,7 @@ class GlobalVariables {
       fontFamily: 'Space_Grotesk',
       fontSize: 14,
       letterSpacing: 0.2,
-      height: 22);
+      height: 1.5);
   //TEXT MEDIUM 14
   static const textMedium_14 = TextStyle(
     fontFamily: 'Space_Grotesk',
@@ -89,7 +98,7 @@ class GlobalVariables {
     fontFamily: 'Space_Grotesk',
     fontSize: 16,
     letterSpacing: 0.2,
-    height: 24,
+    height: 1.5,
     fontWeight: FontWeight.w900,
   );
   //TEXT REGULAR 18
@@ -155,7 +164,7 @@ class GlobalVariables {
     fontFamily: 'Space_Grotesk',
     fontSize: 24,
     letterSpacing: 0.2,
-    height: 28,
+    height: 1.16,
     fontWeight: FontWeight.w900,
   );
   //TEXT REGULAR 28

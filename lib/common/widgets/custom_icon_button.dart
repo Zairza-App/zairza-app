@@ -15,13 +15,7 @@ class CustomIconButton extends StatelessWidget {
           color: Colors.black,
           width: width * 0.0078125,
         ),
-        boxShadow: const [
-          BoxShadow(
-            color: Color(0xff000000),
-            blurRadius: 0,
-            offset: Offset(4, 4),
-          ),
-        ],
+        boxShadow: GlobalVariables.shadowEffect,
         color: GlobalVariables.primaryColor,
       ),
       padding: const EdgeInsets.all(6),

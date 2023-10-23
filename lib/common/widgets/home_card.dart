@@ -16,13 +16,7 @@ class HomeCard extends StatelessWidget {
               width: width * 0.55581395348,
               height: height * 0.17167381974,
               decoration: BoxDecoration(
-                boxShadow: const [
-                  BoxShadow(
-                    color: Color(0xff000000),
-                    blurRadius: 0,
-                    offset: Offset(4, 4),
-                  )
-                ],
+                boxShadow: GlobalVariables.shadowEffect,
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(8),
@@ -85,13 +79,7 @@ class HomeCard extends StatelessWidget {
         Container(
           width: width * 0.55581395348,
           decoration: const BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Color(0xff000000),
-                blurRadius: 0,
-                offset: Offset(4, 4),
-              )
-            ],
+            boxShadow: GlobalVariables.shadowEffect,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(0),
               topRight: Radius.circular(0),
