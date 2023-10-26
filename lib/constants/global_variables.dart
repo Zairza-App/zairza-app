@@ -21,7 +21,7 @@ class GlobalVariables {
 
   static const primaryColor = Color(0xffFF8B2C);
   static const secondaryColor = Color(0xff23A094);
-  static const backgroundColor = Color(0xffE8F1D7);
+  static const pinkColor = Color(0xffFF90E8);
   static const appbarColor = Color(0xffFEFFFF);
 
   static var selectedNavBarColor = Colors.cyan[800];
@@ -84,7 +84,7 @@ class GlobalVariables {
       fontFamily: 'Space_Grotesk',
       fontSize: 16,
       letterSpacing: 0.2,
-      height: 24);
+      height: 1.5);
   //TEXT MEDIUM 16
   static const textMedium_16 = TextStyle(
     fontFamily: 'Space_Grotesk',

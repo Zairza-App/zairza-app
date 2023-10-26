@@ -4,14 +4,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zairza_app/common/widgets/carousel.dart';
 import 'package:zairza_app/common/widgets/custom_icon_button.dart';
 import 'package:zairza_app/common/widgets/home_card.dart';
+import 'package:zairza_app/common/widgets/project_card.dart';
 import 'package:zairza_app/constants/global_variables.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  // final String name = 'Vivek';
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
     ));
@@ -23,7 +27,7 @@ class HomeScreen extends StatelessWidget {
             backgroundColor: Colors.white,
             elevation: 0,
             title: Padding(
-              padding: const EdgeInsets.only(right: 14, left: 14),
+              padding: EdgeInsets.symmetric(horizontal: width * 0.03255813953),
               child: Row(
                 children: [
                   Image.asset('assets/logo.png',
@@ -68,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                   height: height * 0.0135419847328244,
                 ),
                 SizedBox(
-                    height: height * 0.2760944206,
+                    height: height * 0.3150944206,
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
@@ -90,14 +94,16 @@ class HomeScreen extends StatelessWidget {
                           textAlign: TextAlign.justify,
                           style: GlobalVariables.textBold_20),
                       const Spacer(),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const Text("See all",
-                              style: GlobalVariables.textMedium_14),
-                          SizedBox(width: width * 0.0104166666666667),
-                          const Icon(Icons.arrow_forward),
-                        ],
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushReplacementNamed(
+                              context, '/project');
+                        },
+                        child: Text("See all",
+                            style: GlobalVariables.textMedium_14.copyWith(
+                              color: GlobalVariables.primaryColor,
+                              decoration: TextDecoration.underline,
+                            )),
                       ),
                     ],
                   ),
@@ -105,18 +111,27 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: height * 0.0135419847328244,
                 ),
-                SizedBox(
-                    height: 290,
-                    child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        shrinkWrap: true,
-                        itemBuilder: (BuildContext context, index) {
-                          return Padding(
-                            padding:
-                                EdgeInsets.only(left: width * 0.0465116279),
-                            child: const HomeCard(),
-                          );
-                        })),
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: width * 0.05581395348,
+                      right: width * 0.05581395348,
+                      bottom: height * 0.02145922746),
+                  child: const ProjectCard(),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: width * 0.05581395348,
+                      right: width * 0.05581395348,
+                      bottom: height * 0.02145922746),
+                  child: const ProjectCard(),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: width * 0.05581395348,
+                      right: width * 0.05581395348,
+                      bottom: height * 0.02145922746),
+                  child: const ProjectCard(),
+                )
               ],
             ),
           ),

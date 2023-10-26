@@ -8,7 +8,8 @@ import 'Screens/Projects.dart';
 import 'Screens/Resources.dart';
 
 class NavigationBarPage extends StatefulWidget {
-  const NavigationBarPage({super.key});
+  final int givenIndex;
+  const NavigationBarPage({super.key, required this.givenIndex});
 
   @override
   State<NavigationBarPage> createState() => _NavigationBarPageState();
@@ -16,6 +17,11 @@ class NavigationBarPage extends StatefulWidget {
 
 class _NavigationBarPageState extends State<NavigationBarPage> {
   int _selectedIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.givenIndex;
+  }
 
   final List _widgetOptions = [
     const HomeScreen(),
@@ -61,8 +67,8 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: Image.asset(
                               'assets/icons/navbarIcons/Homecolor.png',
-                              height: height*0.04721030042,
-                              width: height*0.04721030042,
+                              height: height * 0.04721030042,
+                              width: height * 0.04721030042,
                             ),
                           )
                         : Padding(
@@ -81,8 +87,8 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: Image.asset(
                               'assets/icons/navbarIcons/Resourcescolor.png',
-                              height: height*0.04721030042,
-                              width: height*0.04721030042,
+                              height: height * 0.04721030042,
+                              width: height * 0.04721030042,
                             ),
                           )
                         : Padding(
@@ -101,8 +107,8 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: Image.asset(
                               'assets/icons/navbarIcons/Projectscolor.png',
-                              height: height*0.04721030042,
-                              width: height*0.04721030042,
+                              height: height * 0.04721030042,
+                              width: height * 0.04721030042,
                             ),
                           )
                         : Padding(
@@ -121,8 +127,8 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
                             padding: const EdgeInsets.only(bottom: 4.0),
                             child: Image.asset(
                               'assets/icons/navbarIcons/Profilecolor.png',
-                              height: height*0.04721030042,
-                              width: height*0.04721030042,
+                              height: height * 0.04721030042,
+                              width: height * 0.04721030042,
                             ),
                           )
                         : Padding(
