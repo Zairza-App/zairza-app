@@ -173,7 +173,7 @@ class ResourcesPage extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pushReplacementNamed(context, '/blogs');
+                    Navigator.pushNamed(context, '/session_presentation');
                   },
                   child: Text("See more",
                       style: GlobalVariables.textMedium_14.copyWith(
