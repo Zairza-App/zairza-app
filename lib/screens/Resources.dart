@@ -42,7 +42,7 @@ class ResourcesPage extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.pushReplacementNamed(
+                            Navigator.pushNamed(
                                 context, '/roadmaps');
                           },
                           child: Text("See more",
