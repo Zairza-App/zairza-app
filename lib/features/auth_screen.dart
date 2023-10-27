@@ -30,7 +30,7 @@ class _AuthScreenState extends State<AuthScreen> {
         content: Text(message),
         actions: <Widget>[
           TextButton(
-            child: Text('Okay'),
+            child: const Text('Okay'),
             onPressed: () {
               Navigator.of(ctx).pop();
             },
@@ -88,7 +88,7 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your App'),
+        title: const Text('Your App'),
       ),
       body: Container(
         padding: const EdgeInsets.all(16),
@@ -98,7 +98,7 @@ class _AuthScreenState extends State<AuthScreen> {
             children: [
               TextFormField(
                 controller: _nameController,
-                decoration: InputDecoration(labelText: 'Name'),
+                decoration: const InputDecoration(labelText: 'Name'),
                 textInputAction: TextInputAction.next,
                 validator: (value) {
                   if (value!.isEmpty) {
@@ -109,7 +109,7 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               TextFormField(
                 controller: _regNoController,
-                decoration: InputDecoration(labelText: 'Registration Number'),
+                decoration: const InputDecoration(labelText: 'Registration Number'),
                 textInputAction: TextInputAction.next,
                 validator: (value) {
                   if (value!.isEmpty) {
@@ -120,7 +120,7 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               TextFormField(
                 controller: _branchController,
-                decoration: InputDecoration(labelText: 'Branch'),
+                decoration: const InputDecoration(labelText: 'Branch'),
                 textInputAction: TextInputAction.next,
                 validator: (value) {
                   if (value!.isEmpty) {
@@ -131,7 +131,7 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               TextFormField(
                 controller: _phoneController,
-                decoration: InputDecoration(labelText: 'Phone Number'),
+                decoration: const InputDecoration(labelText: 'Phone Number'),
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.phone,
                 validator: (value) {
@@ -143,7 +143,7 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               TextFormField(
                 controller: _emailController,
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: const InputDecoration(labelText: 'Email'),
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
@@ -158,7 +158,7 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               TextFormField(
                 controller: _passwordController,
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: const InputDecoration(labelText: 'Password'),
                 obscureText: true,
                 textInputAction:
                     isLogin ? TextInputAction.done : TextInputAction.next,
@@ -175,7 +175,7 @@ class _AuthScreenState extends State<AuthScreen> {
               if (!isLogin) // Show batch field only for registration
                 TextFormField(
                   controller: _batchController,
-                  decoration: InputDecoration(labelText: 'Batch'),
+                  decoration: const InputDecoration(labelText: 'Batch'),
                   textInputAction: TextInputAction.done,
                   keyboardType: TextInputType.number,
                   validator: (value) {
@@ -185,20 +185,20 @@ class _AuthScreenState extends State<AuthScreen> {
                     return null;
                   },
                 ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               if (_isLoading)
-                Center(
+                const Center(
                   child: CircularProgressIndicator(),
                 ),
               if (!_isLoading)
                 ElevatedButton(
                   onPressed: () => _submitAuthForm(true),
-                  child: Text('Login'),
+                  child: const Text('Login'),
                 ),
               if (!_isLoading)
                 TextButton(
                   onPressed: () => _submitAuthForm(false),
-                  child: Text('Register'),
+                  child: const Text('Register'),
                 ),
             ],
           ),

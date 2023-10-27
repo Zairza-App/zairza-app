@@ -1,179 +1,134 @@
 import 'package:flutter/material.dart';
+import 'package:zairza_app/common/widgets/tags.dart';
+import 'package:zairza_app/constants/global_variables.dart';
 
 class HomeCard extends StatelessWidget {
-  HomeCard({super.key});
+  const HomeCard({super.key});
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
-    return Column(
-      children: [
-        Stack(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(0xff000000),
-                    blurRadius: 0,
-                    offset: Offset(4, 4),
-                  )
-                ],
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(8),
-                  topRight: Radius.circular(8),
-                  bottomLeft: Radius.circular(0),
-                  bottomRight: Radius.circular(0),
+    return InkWell(
+      onTap: (() {
+        Navigator.pushNamed(context, '/home_card');
+      }),
+      child: Column(
+        children: [
+          Stack(
+            children: [
+              Container(
+                width: width * 0.55581395348,
+                height: height * 0.17167381974,
+                decoration: BoxDecoration(
+                  boxShadow: GlobalVariables.shadowEffect,
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(8),
+                    topRight: Radius.circular(8),
+                    bottomLeft: Radius.circular(0),
+                    bottomRight: Radius.circular(0),
+                  ),
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2,
+                    // strokeAlign: BorderSide.strokeAlignInside
+                  ),
                 ),
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 0.5),
+                  child: ClipRRect(
+                    borderRadius:
+                        const BorderRadius.only(topLeft: Radius.circular(4)),
+                    child: Image.asset(
+                      'assets/images/HomeCard1.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ),
-              child: Stack(
-                children: [
-                  Container(
-                    width: width * 0.5623958333333333,
-                    height: height * 0.1908396946564885,
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(8),
+                        topLeft: Radius.circular(0),
                         topRight: Radius.circular(8),
-                        bottomLeft: Radius.circular(0),
+                        bottomLeft: Radius.circular(8),
                         bottomRight: Radius.circular(0),
                       ),
                       border: Border.all(
                         color: Colors.black,
-                        width: width * 0.0026041666666667,
+                        width: 2,
+                        // strokeAlign: BorderSide.strokeAlignOutside
                       ),
-                      color: const Color(0xffd9d9d9),
+                      color: Colors.white,
                     ),
-                  ),
-                  Positioned.fill(
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: SizedBox(
-                        width: width * 1.572916666666667,
-                        height: height * 1.012643129770992,
-                        child: Image.asset(
-                          'assets/HomeCard1.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 8,
                     ),
-                  ),
-                ],
-              ),
-            ),
-            Positioned.fill(
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(8),
-                      topRight: Radius.circular(0),
-                      bottomLeft: Radius.circular(0),
-                      bottomRight: Radius.circular(8),
-                    ),
-                    border: Border.all(
-                      color: Colors.black,
-                      width: width * 0.0052083333333333,
-                    ),
-                    color: Colors.white,
-                  ),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 8,
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "20th Feb 2023",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        Container(
-          width: width * 0.5728125,
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Color(0xff000000),
-                blurRadius: 0,
-                offset: Offset(4, 4),
-              )
-            ],
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(0),
-              topRight: Radius.circular(0),
-              bottomLeft: Radius.circular(8),
-              bottomRight: Radius.circular(8),
-            ),
-            border: Border.all(
-              color: Colors.black,
-              width: width * 0.0052083333333333,
-            ),
-            color: Colors.white,
-          ),
-          padding: const EdgeInsets.all(16),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Column(
+                    child: const Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "HARDWARE",
-                          style: TextStyle(
-                            color: Color(0xffef7a6b),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        SizedBox(
-                          width: width * 0.5390625,
-                          child: Text(
-                            "Internet of things (IoT) Workshop",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        ),
+                        Text("20th Feb 2023",
+                            style: GlobalVariables.textBold_14),
                       ],
                     ),
-                  ],
+                  ),
                 ),
               ),
             ],
           ),
-        ),
-      ],
+          Container(
+            width: width * 0.55581395348,
+            decoration: const BoxDecoration(
+              boxShadow: GlobalVariables.shadowEffect,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(0),
+                topRight: Radius.circular(0),
+                bottomLeft: Radius.circular(8),
+                bottomRight: Radius.circular(8),
+              ),
+              border: BorderDirectional(
+                  top: BorderSide(width: 0),
+                  bottom: BorderSide(width: 2),
+                  start: BorderSide(width: 2),
+                  end: BorderSide(width: 2)),
+              color: Colors.white,
+            ),
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("HARDWARE",
+                    style: GlobalVariables.textMedium_12.copyWith(
+                        color: GlobalVariables.primaryColor, height: 1)),
+                SizedBox(
+                  width: width * 0.5390625,
+                  child: Text("Internet of things (IoT) Workshop",
+                      style:
+                          GlobalVariables.textMedium_16.copyWith(height: 1.35)),
+                ),
+                SizedBox(height: height * 0.00643776824),
+                const Row(
+                  children: [
+                    Tags(tagName: 'hardware'),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 4.0),
+                      child: Tags(tagName: 'arduino'),
+                    ),
+                    Tags(tagName: '...'),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

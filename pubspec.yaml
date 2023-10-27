@@ -20,11 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-<<<<<<< HEAD
-  sdk: '>=2.19.0-0 <4.0.0'
-=======
   sdk: '>=2.18.2 <3.0.0'
->>>>>>> 0901071669b693e7edc32deb10110cc2e03b1336
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -41,6 +37,8 @@ dependencies:
   google_fonts: ^4.0.1
   http: ^0.13.5
   shared_preferences: ^2.0.18
+  dots_indicator: ^3.0.0
+  youtube: ^1.0.0
 
 
 dev_dependencies:
@@ -60,7 +58,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/resources/
+    - assets/images/profile/joinMeOn/
+    - assets/images/profile/profilePhoto/
     - assets/icons/
+    - assets/icons/navbarIcons/
     - assets/illustrations/
     - assets/
 
@@ -79,6 +81,10 @@ flutter:
     - family: Space_Grotesk
       fonts:
         - asset: fonts/SpaceGrotesk-Regular.ttf
+        - asset: fonts/SpaceGrotesk-Bold.ttf
+          weight: 900
+        - asset: fonts/SpaceGrotesk-Medium.ttf
+          weight: 700
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

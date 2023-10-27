@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zairza_app/common/widgets/custom_button.dart';
 
-import '../common/custom_textfield.dart';
+import '../common/widgets/custom_textfield.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -57,8 +57,8 @@ class SignIn extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.0259,
                   ),
                   RichText(
-                    text: new TextSpan(children: [
-                      new TextSpan(
+                    text: TextSpan(children: [
+                      TextSpan(
                         text: 'Welcome\n',
                         style: GoogleFonts.spaceGrotesk(
                             textStyle: const TextStyle(
@@ -67,7 +67,7 @@ class SignIn extends StatelessWidget {
                                 letterSpacing: 0.2,
                                 color: Colors.black)),
                       ),
-                      new TextSpan(
+                      TextSpan(
                         text: 'back ',
                         style: GoogleFonts.spaceGrotesk(
                             textStyle: const TextStyle(
@@ -76,7 +76,7 @@ class SignIn extends StatelessWidget {
                                 letterSpacing: 0.2,
                                 color: Colors.black)),
                       ),
-                      new TextSpan(
+                      TextSpan(
                         text: 'Zairites',
                         style: GoogleFonts.spaceGrotesk(
                           textStyle: const TextStyle(
@@ -87,7 +87,7 @@ class SignIn extends StatelessWidget {
                           ),
                         ),
                       ),
-                      new TextSpan(
+                      TextSpan(
                         text: '!!',
                         style: GoogleFonts.spaceGrotesk(
                             textStyle: const TextStyle(
@@ -143,7 +143,7 @@ class SignIn extends StatelessWidget {
                       text: TextSpan(
                         recognizer: TapGestureRecognizer(),
                         text: 'Forgot Passowrd?',
-                        style: TextStyle(
+                        style: const TextStyle(
                           decoration: TextDecoration.underline,
                           color: Color(0xffFF8B2C),
                         ),
@@ -166,12 +166,12 @@ class SignIn extends StatelessWidget {
                       ),
                       Center(
                         child: RichText(
-                          text: new TextSpan(
+                          text: const TextSpan(
                             children: [
-                              new TextSpan(
+                              TextSpan(
                                   text: 'Already have an account?',
                                   style: TextStyle(color: Colors.black)),
-                              new TextSpan(
+                              TextSpan(
                                 text: 'Login',
                                 style: TextStyle(
                                   color: Color(0xffFF8B2C),

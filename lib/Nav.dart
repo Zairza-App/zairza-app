@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:zairza_app/constants/global_variables.dart';
 import 'package:zairza_app/screens/home_screen.dart';
 
-import 'Screens/Homepage.dart';
 import 'Screens/My_Profile.dart';
 import 'Screens/Projects.dart';
 import 'Screens/Resources.dart';
 
 class NavigationBarPage extends StatefulWidget {
-  const NavigationBarPage({super.key});
+  final int givenIndex;
+  const NavigationBarPage({super.key, required this.givenIndex});
 
   @override
   State<NavigationBarPage> createState() => _NavigationBarPageState();
@@ -16,19 +17,24 @@ class NavigationBarPage extends StatefulWidget {
 
 class _NavigationBarPageState extends State<NavigationBarPage> {
   int _selectedIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.givenIndex;
+  }
 
-  List _widgetOptions = [
-    HomeScreen(),
-    ResourcesPage(),
-    ProjectPage(),
-    MyProfile()
+  final List _widgetOptions = [
+    const HomeScreen(),
+    const ResourcesPage(),
+    const ProjectPage(),
+    const MyProfile()
   ];
 
   get isSelected => true;
 
-  void _onItemTapped(int _widgetOptions) {
+  void _onItemTapped(int widgetOptions) {
     setState(() {
-      _selectedIndex = _widgetOptions;
+      _selectedIndex = widgetOptions;
     });
   }
 
@@ -36,114 +42,103 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
 
   @override
   Widget build(BuildContext context) {
-    var mediaQuery = MediaQuery.of(context);
+    double height = MediaQuery.of(context).size.height;
+    // double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
         body: _widgetOptions[_selectedIndex],
         bottomNavigationBar: Container(
-          decoration: BoxDecoration(
+          height: height * 0.10085836909,
+          decoration: const BoxDecoration(
               border: Border(top: BorderSide(color: Colors.black, width: 4))),
           child: BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
               unselectedItemColor: Colors.black,
-              unselectedLabelStyle: TextStyle(
-                  fontFamily: 'Space_Grotesk', fontWeight: FontWeight.bold),
-              selectedLabelStyle: TextStyle(
-                  fontFamily: 'Space_Grotesk', fontWeight: FontWeight.bold),
-              selectedItemColor: Color(0xffFF8B2C),
+              unselectedLabelStyle: GlobalVariables.textBold_12,
+              selectedLabelStyle: GlobalVariables.textBold_14,
+              selectedItemColor: const Color(0xffFF8B2C),
               showUnselectedLabels: true,
               currentIndex: _selectedIndex,
               onTap: _onItemTapped,
               items: [
                 BottomNavigationBarItem(
                     icon: _selectedIndex == 0
-                        ? Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(4),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.black, offset: Offset(2, 2))
-                                ],
-                                border: Border.all(color: Colors.black)),
-                            child:
-                                SvgPicture.asset('assets/images/Homecolor.svg'),
+                        ? Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: Image.asset(
+                              'assets/icons/navbarIcons/Homecolor.png',
+                              height: height * 0.04721030042,
+                              width: height * 0.04721030042,
+                            ),
                           )
-                        : Container(
-                            height: 40,
-                            width: 40,
-                            child: SvgPicture.asset('assets/images/Home.svg'),
+                        : Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: SizedBox(
+                              height: height * 0.04291845493,
+                              width: height * 0.04291845493,
+                              child: SvgPicture.asset(
+                                  'assets/icons/navbarIcons/Home.svg'),
+                            ),
                           ),
                     label: 'Home'),
                 BottomNavigationBarItem(
                     icon: _selectedIndex == 1
-                        ? Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(4),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.black, offset: Offset(2, 2))
-                                ],
-                                border: Border.all(color: Colors.black)),
-                            child: SvgPicture.asset(
-                                'assets/images/Resourcescolor.svg'),
+                        ? Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: Image.asset(
+                              'assets/icons/navbarIcons/Resourcescolor.png',
+                              height: height * 0.04721030042,
+                              width: height * 0.04721030042,
+                            ),
                           )
-                        : Container(
-                            height: 40,
-                            width: 40,
-                            child:
-                                SvgPicture.asset('assets/images/Resources.svg'),
+                        : Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: SizedBox(
+                              height: height * 0.04291845493,
+                              width: height * 0.04291845493,
+                              child: SvgPicture.asset(
+                                  'assets/icons/navbarIcons/Resources.svg'),
+                            ),
                           ),
                     label: 'Resources'),
                 BottomNavigationBarItem(
                     icon: _selectedIndex == 2
-                        ? Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(4),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.black, offset: Offset(2, 2))
-                                ],
-                                border: Border.all(color: Colors.black)),
-                            child: SvgPicture.asset(
-                                'assets/images/Projectscolor.svg'),
+                        ? Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: Image.asset(
+                              'assets/icons/navbarIcons/Projectscolor.png',
+                              height: height * 0.04721030042,
+                              width: height * 0.04721030042,
+                            ),
                           )
-                        : Container(
-                            height: 40,
-                            width: 40,
-                            child:
-                                SvgPicture.asset('assets/images/Projects.svg'),
+                        : Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: SizedBox(
+                              height: height * 0.04291845493,
+                              width: height * 0.04291845493,
+                              child: SvgPicture.asset(
+                                  'assets/icons/navbarIcons/Projects.svg'),
+                            ),
                           ),
                     label: 'Projects'),
                 BottomNavigationBarItem(
                     icon: _selectedIndex == 3
-                        ? Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(4),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.black, offset: Offset(2, 2))
-                                ],
-                                border: Border.all(color: Colors.black)),
-                            child: SvgPicture.asset(
-                                'assets/images/Profilecolor.svg'),
+                        ? Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: Image.asset(
+                              'assets/icons/navbarIcons/Profilecolor.png',
+                              height: height * 0.04721030042,
+                              width: height * 0.04721030042,
+                            ),
                           )
-                        : Container(
-                            height: 40,
-                            width: 40,
-                            child:
-                                SvgPicture.asset('assets/images/Profile.svg'),
+                        : Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: SizedBox(
+                              height: height * 0.04291845493,
+                              width: height * 0.04291845493,
+                              child: SvgPicture.asset(
+                                  'assets/icons/navbarIcons/Profile.svg'),
+                            ),
                           ),
                     label: 'Profile'),
               ]),
