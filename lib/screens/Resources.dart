@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zairza_app/common/widgets/blog_card.dart';
 import 'package:zairza_app/common/widgets/roadmap_tag.dart';
 import 'package:zairza_app/common/widgets/session_tag.dart';
+import 'package:zairza_app/common/widgets/video_card.dart';
 import 'package:zairza_app/constants/global_variables.dart';
 
 class ResourcesPage extends StatelessWidget {
@@ -233,6 +234,7 @@ class ResourcesPage extends StatelessWidget {
               ],
             ),
           ),
+          const VideoCard(),
         ]),
       ),
     );
