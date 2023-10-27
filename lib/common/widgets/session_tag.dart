@@ -12,7 +12,8 @@ class SessionTag extends StatelessWidget {
     return Container(
       height: height * 0.03862660944,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(4), border: Border.all(width: 2)),
+          borderRadius: BorderRadius.circular(4), border: Border.all(width: 2),
+          color: Colors.white),
       child: Row(
         children: [
           Container(
